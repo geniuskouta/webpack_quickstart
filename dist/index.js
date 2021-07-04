@@ -6,7 +6,17 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["libraryName"] = factory();
+	else
+		root["libraryName"] = factory();
+})(this, function() {
+return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -15,7 +25,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://xhr_request_handler/./src/index.js?");
+eval("\n\n//# sourceURL=webpack://libraryName/./src/index.js?");
 
 /***/ })
 
@@ -28,5 +38,7 @@ eval("\n\n//# sourceURL=webpack://xhr_request_handler/./src/index.js?");
 /******/ 	var __webpack_exports__ = {};
 /******/ 	__webpack_modules__["./src/index.js"]();
 /******/ 	
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});
